@@ -1,0 +1,174 @@
+/* Reset básico para quitar márgenes y padding predeterminados */
+body,
+h1,
+table,
+input,
+select,
+button,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general para el contenedor principal */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para la barra de búsqueda */
+#searchBar {
+    margin-top: 20px;
+    width: 200px;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo para el botón "Agregar Nuevo Producto al Catálogo" */
+#agregarProductoBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Estilo para el botón de selección de divisa */
+#moneda {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+
+/* Estilo para el contenedor de cálculo de precio */
+#resultado {
+    margin-top: 40px;
+}
+
+/* Estilo para el área de mensajes */
+#mensajeError,
+#mensajeProductoAgotado {
+    margin-top: 20px;
+}
+
+/* Estilo para el formulario de nuevo producto */
+#formularioProducto {
+    display: none;
+    position: fixed;
+    top: 50%;
+    /* 50% del alto de la ventana */
+    left: 50%;
+    /* 50% del ancho de la ventana */
+    transform: translate(-50%, -50%);
+    /* Esto centra el elemento */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el contenedor de mensajes y errores */
+#contenedorMensaje,
+#contenedorMensajeError,
+#mensajeError,
+#mensajeProductoAgotado{
+    margin-top: 20px;
+    color: red;
+    display: none
+}
+
+/* Aumentar el tamaño de la barra de búsqueda y el select del país */
+#searchBar,
+#pais {
+    width: 300px;
+    /* Ancho aumentado */
+    margin-bottom: 20px;
+    /* Separación inferior */
+    font-size: 16px;
+    /* Tamaño de la fuente aumentado */
+    padding: 10px;
+    /* Espaciado interno */
+}
+
+/* Aumentar el tamaño del input de unidades */
+#unidades {
+    width: 150px;
+    /* Ancho aumentado */
+    margin-bottom: 20px;
+    /* Separación inferior */
+    font-size: 16px;
+    /* Tamaño de la fuente aumentado */
+    padding: 10px;
+    /* Espaciado interno */
+}
+
+/* Aumentar el tamaño del input de código de descuento */
+#codigoDescuento {
+    width: 200px;
+    /* Ancho aumentado */
+    margin-bottom: 20px;
+    /* Separación inferior */
+    font-size: 16px;
+    /* Tamaño de la fuente aumentado */
+    padding: 10px;
+    /* Espaciado interno */
+}
+
+/* Aumentar el tamaño del botón de calcular precio */
+#calcularPrecioBtn {
+    padding: 12px 20px;
+    /* Espaciado interno aumentado */
+    font-size: 18px;
+    /* Tamaño de la fuente aumentado */
+    margin-bottom: 20px;
+    /* Separación inferior */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro */
+    z-index: 9999;
+    /* Asegura que el fondo oscuro esté por encima de otros elementos */
+    display: none;
+    /* Por defecto, oculto */
+}
+
+#formContainer {
+    position: fixed;
+    top: 50%;
+    /* Aparecerá centrado verticalmente */
+    left: 50%;
+    /* Aparecerá centrado horizontalmente */
+    /* Centra el div */
+    background-color: #fff;
+    /* Fondo blanco para el formulario */
+    padding: 20px;
+    z-index: 10000;
+    /* Asegura que esté por encima del fondo oscuro */
+    display: none;
+    /* Por defecto, oculto */
+}
